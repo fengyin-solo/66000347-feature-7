@@ -11,6 +11,7 @@ export interface CognateSet {
   root: string; meaning: string
   languages: Record<string, string>
   period: string; family: string
+  updatedAt: string
 }
 export interface LanguageFamily {
   id: string; name: string; color: string; languages: string[]; era: string
