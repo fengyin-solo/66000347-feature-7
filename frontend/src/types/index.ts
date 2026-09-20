@@ -11,7 +11,19 @@ export interface CognateSet {
   root: string; meaning: string
   languages: Record<string, string>
   period: string; family: string
+  updatedAt?: string
 }
 export interface LanguageFamily {
   id: string; name: string; color: string; languages: string[]; era: string
+}
+export interface FamilyLanguageStat {
+  language: string; covered: number; missing: number
+}
+export interface FamilyStats {
+  familyId: string; rootCount: number
+  coveredCells: number; totalCells: number
+  gapCount: number; coverageRate: number
+  languageStats: FamilyLanguageStat[]
+  gapLanguages: FamilyLanguageStat[]
+  recent: CognateSet[]; sets: CognateSet[]
 }
